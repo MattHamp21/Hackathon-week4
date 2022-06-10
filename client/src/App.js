@@ -8,10 +8,10 @@ function App() {
     <Routes>
       <Route element={<PageWrapper />}>
         <Route index element={<Home />} />
-        <Route path="/Game" element={<Game />} />
+        {/* <Route path="/Game" element={<Game />} />
         <Route path="/Character" element={<Character />} />
         <Route path="/Weapon" element={<Weapon />} />
-        <Route path="/Bonus" element={<Bonus />} />
+        <Route path="/Bonus" element={<Bonus />} /> */}
       </Route>
     </Routes>
   );
