@@ -3,4 +3,4 @@ class Game < ApplicationRecord
     validates :year, numericality: true
     validates :genre, presence: true
 end
-end
+
