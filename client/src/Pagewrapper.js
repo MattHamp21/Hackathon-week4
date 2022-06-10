@@ -1,3 +1,5 @@
+import { Link, Outlet } from "react-router-dom";
+
 const PageWrapper = () => {
   return (
     <div>
@@ -24,3 +26,5 @@ const PageWrapper = () => {
     </div>
   );
 };
+
+export default PageWrapper;
