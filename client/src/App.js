@@ -9,7 +9,8 @@ import Game from "./Game/Game";
 import Character from "./Character/Character";
 import Weapon from "./Weapon/Weapon";
 import PageWrapper from "./Pagewrapper";
-
+import NewCharacter from "./Character/NewCharacter";
+import UpdateCharacterForm from "./Character/UpdateCharacter";
 function App() {
   return (
     <Routes>
@@ -18,8 +19,11 @@ function App() {
         {/* /* <Route path="/Game" element={<Game />} /> */}
         <Route path="/characters" element={<CharacterWrapper />}>
           <Route index element={<Characters />} />
-          <Route path="/characters/new" element={<CharacterForm />} />
-          <Route path="/characters/edit/:id" element={<CharacterForm />} />
+          <Route path="/characters/new" element={<NewCharacter />} />
+          <Route
+            path="/characters/edit/:id"
+            element={<UpdateCharacterForm />}
+          />
           <Route path="/characters/:id" element={<CharacterShow />} />
         </Route>
         {/* <Route path="/Weapon" element={<Weapon />} /> */}

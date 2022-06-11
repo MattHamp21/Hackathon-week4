@@ -12,7 +12,7 @@ const NewCharacter = (props) => {
     try {
       let res = await axios.post("/api/characters", { name, age, game });
       console.log(res.data);
-      props.addUser(res.data);
+      props.addCharacter(res.data);
     } catch (err) {
       console.log(err);
     }
@@ -20,7 +20,7 @@ const NewCharacter = (props) => {
 
   return (
     <div>
-      <h1>Form</h1>
+      <h1>Add your favorite video game Character</h1>
       <form onSubmit={handleSubmit}>
         <p>name</p>
         <input value={name} onChange={(c) => setName(c.target.value)} />

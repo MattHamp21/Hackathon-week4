@@ -22,6 +22,7 @@ export default function Characters(c) {
       <Link to="/characters/edit/2">Update character 2</Link>
       <Link to="/characters/2">Show character 2</Link>
       <button onClick={() => deleteCharacter(c.id)}>delete</button>
+
       <hr />
     </div>
   );
