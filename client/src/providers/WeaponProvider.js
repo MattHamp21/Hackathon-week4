@@ -25,14 +25,23 @@ const WeaponProvider = (props)=>{
     const updateInfo = (newInfo) => {
         let newWeapons = weapons.map((current) => (current.id == newInfo.id ? newInfo : current))
         setWeapons(newWeapons)
+        let name = newInfo.name
+        let weapon_type = newInfo.weapon_type
+        let game = newInfo.game
+        axios.put(`/api/weapons/${newInfo.id}`, {name, weapon_type, game})
     };
     const addWeapon = (newWeapon) => {
         setWeapons([...weapons, newWeapon])
+        let name = newWeapon.name
+        let weapon_type = newWeapon.weapon_type
+        let game = newWeapon.game
+        axios.post("/api/weapons", {name, weapon_type, game})
     };
     const deleteWeapon = (id) => {
-        [...weapons].filter((current) => {
+        let filteredWeapons = [...weapons].filter((current) => {
             return current.id !== id
         })
+        setWeapons(filteredWeapons)
         axios.delete(`/api/weapons/${id}`)
     }
 

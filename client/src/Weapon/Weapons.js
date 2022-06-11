@@ -1,6 +1,7 @@
 import WeaponCard from "./WeaponCard"
 import { useContext } from "react"
 import { WeaponContext } from "../providers/WeaponProvider"
+import NewWeapon from "./WeaponForm";
 
 export default function Weapons(){
     const data = useContext(WeaponContext);
@@ -11,8 +12,11 @@ export default function Weapons(){
     };
     return(
         <div>
-            <h1>Video Game Weapons</h1>
-            <div>{renderWeapons()}</div>
+            <NewWeapon /> 
+            <div>
+                <h1>Video Game Weapons</h1>
+                <div>{renderWeapons()}</div>
+            </div>
         </div>
     )
 }
