@@ -28,7 +28,7 @@ export default function CharacterShow() {
 
   return (
     <div>
-      <h1>Show Character</h1>
+      <h1>Character info</h1>
 
       <p> Name: {characters.name}</p>
       <p>Age: {characters.age}</p>
