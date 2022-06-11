@@ -14,7 +14,7 @@ export default function UpdateWeapon(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let newInfo = {id: params.id, name, weapon_type, game};
+        let newInfo = {id: params.id, name:name, weapon_type:weapon_type, game:game};
         data.updateInfo(newInfo)
         Navigate("/Weapons")
     };
