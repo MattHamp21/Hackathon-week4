@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Character.destroy_all
+Game.destroy_all
+Weapon.destroy_all
 
 Character.create(name:'Kratos', age:1050, game:'God of War')
 Character.create(name:'Cayde-6', age:126, game:'Destiny')
