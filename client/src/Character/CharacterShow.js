@@ -6,7 +6,7 @@ import Characters from "./Character";
 export default function CharacterShow() {
   const params = useParams();
   const navigate = useNavigate;
-  const [characters, setCharacters] = useState(null);
+  const [characters, setCharacters] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,14 +14,9 @@ export default function CharacterShow() {
     getCharacters();
   }, []);
 
-  const deleteCharacter = (id) => {
-    let newCharacter = characters.filter((c) => c.id !== id);
-    setCharacters(newCharacter);
-  };
-
   const getCharacters = async () => {
     try {
-      let res = await axios.get("/api/characters");
+      let res = await axios.get(`/api/characters/${params.id}`);
       console.log("res", res);
       setCharacters(res.data);
     } catch (err) {
@@ -31,28 +26,14 @@ export default function CharacterShow() {
     }
   };
 
-  const renderUser = () => {
-    if (loading) {
-      return <p>loading</p>;
-    }
-    if (error) {
-      return <p>{JSON.stringify(error)}</p>;
-    }
-    return characters.map((c) => {
-      return (
-        <div key={c.id}>
-          <h1>Name: {c.name}</h1>
-          <button onClick={() => deleteCharacter(c.id)}>delete</button>
-        </div>
-      );
-    });
-  };
   return (
     <div>
       <h1>Show Character</h1>
       <p> showing Character with id {params.id}</p>
-      <p> Name: {params.name}</p>
-      <div>{renderUser()}</div>
+      <p> Name: {characters.name}</p>
+      <p>Age: {characters.age}</p>
+      <p>Game: {characters.game}</p>
+      <hr></hr>
       <Link to="/Character">Go back to character</Link>
     </div>
   );
