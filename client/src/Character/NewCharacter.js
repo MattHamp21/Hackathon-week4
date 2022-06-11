@@ -40,20 +40,3 @@ const NewCharacter = (props) => {
 };
 
 export default NewCharacter;
-
-//     return (
-//         <div>
-//             <h2>Add your favorite game!</h2>
-//             <form onSubmit={handleSubmit}>
-//                 <p>Name</p>
-//                 <input value={name} onChange={(e)=>setName(e.target.value)}/>
-//                 <p>Year</p>
-//                 <input type='number' value={year} onChange={(e)=>setYear(e.target.value)}/>
-//                 <p>Genre</p>
-//                 <input value={genre} onChange={(e)=>setGenre(e.target.value)}/>
-
-//                 <button>Submit Changes</button>
-//             </form>
-//         </div>
-//     )
-// };

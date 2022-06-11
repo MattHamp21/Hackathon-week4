@@ -6,7 +6,7 @@ export default function CharacterCard(props) {
     <div className="card">
       <h2>{props.name}</h2>
       <Link to={`/characters/edit/${props.id}`}>Update Character</Link>
-      <Link to={`/characters/${props.id}`}>show Character {props.id}</Link>
+      <Link to={`/characters/${props.id}`}>Show more info </Link>
       <button onClick={() => props.deleteCharacter(props.id)}>delete</button>
     </div>
   );
