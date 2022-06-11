@@ -5,8 +5,8 @@ const CharacterWrapper = () => {
     <div>
       <div className="navbar">
         <hr />
-        <Link to="/character">Character List</Link>
-        <Link to="/character/new">New Character</Link>
+        <Link to="/characters">Character List</Link>
+        <Link to="/characters/new">New Character</Link>
       </div>
       <div>
         <Outlet />

@@ -19,9 +19,9 @@ const PageWrapper = () => {
         <Link className="links" to="/bonus">
           Bonus
         </Link>
-        <div className="body">
-          <Outlet />
-        </div>
+      </div>
+      <div className="body">
+        <Outlet />
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ export default function CharacterForm() {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    navigate("/Characters");
+    navigate("/characters");
 
     return (
       <div>
@@ -15,7 +15,7 @@ export default function CharacterForm() {
         <hr />
         {params.id ? `id is ${params.id}` : "no id"}
         <hr />
-        <Link to="/Character">Go back to character</Link>
+        <Link to="/Characters">Go back to character</Link>
         <button onClick={handleSubmit}> {params.id ? "Edit" : "New"} </button>
       </div>
     );
