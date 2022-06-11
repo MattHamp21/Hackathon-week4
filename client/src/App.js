@@ -12,6 +12,7 @@ import PageWrapper from "./Pagewrapper";
 import NewCharacter from "./Character/NewCharacter";
 import UpdateCharacterForm from "./Character/UpdateCharacter";
 import UpdateWeapon from "./Weapon/UpdateWeapon";
+import Bonus from "./Bonus";
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
         <Route path="/Character" element={<Character />} />
         <Route path="/Weapons" element={<Weapons />} />
         <Route path="/weapons/:id/update" element={<UpdateWeapon />} />
-        {/* <Route path="/Bonus" element={<Bonus />} />  */}
+        <Route path="/Bonus" element={<Bonus />} /> 
       </Route>
     </Routes>
   );

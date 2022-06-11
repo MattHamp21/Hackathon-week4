@@ -65,6 +65,7 @@ export default function Game() {
 
     return (
         <div>
+            <h1>Our Favorite Games</h1>
             <GameForm
                 addGame ={addGame} 
             />

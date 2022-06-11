@@ -17,7 +17,7 @@ export default function UpdateGame(props){
     };
 
     return (
-        <div>
+        <div  className="card">
             <h2>Update</h2>
             <form onSubmit={handleSubmit}>
                 <p>Name</p>
