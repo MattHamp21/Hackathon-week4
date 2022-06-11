@@ -30,7 +30,7 @@ export default function GameForm(props){
                 <p>Genre</p>
                 <input value={genre} onChange={(e)=>setGenre(e.target.value)}/>
 
-                <button>Submit Changes</button>
+                <button>Submit</button>
             </form>
         </div>
     )

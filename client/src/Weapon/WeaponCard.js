@@ -10,7 +10,7 @@ const WeaponCard = ({id, name, weapon_type, game}) => {
         navigate(path)
     }
     return(
-        <div>
+        <div className="card">
             <h2>{name}</h2>
             <p>{name} is a {weapon_type} from {game}</p>
             <button onClick={() => {data.deleteWeapon(id)}}>Delete</button>
