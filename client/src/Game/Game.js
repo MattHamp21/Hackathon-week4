@@ -10,7 +10,7 @@ export default function Game() {
 
     useEffect(() => {
         getGames();
-    });
+    },[]);
 
     const getGames = async () => {
         try {
