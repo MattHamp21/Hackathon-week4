@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 // we use axios in order to make request to
 
@@ -7,11 +8,11 @@ const UpdateCharacterForm = (props) => {
   const [name, setName] = useState(props.name);
   const [age, setAge] = useState(props.age);
   const [game, setGame] = useState(props.game);
-
+  const params = useParams;
   const handleSubmit = async (c) => {
     c.preventDefault();
     try {
-      let res = await axios.put(`/api/characters/${props.id}`, {
+      let res = await axios.put(`/api/characters/${params.id}`, {
         name,
         age,
         game,
