@@ -7,10 +7,12 @@ import CharacterWrapper from "./Character/CharacterWrapper";
 import CharacterShow from "./Character/CharacterShow";
 import Game from "./Game/Game";
 import Character from "./Character/Character";
-import Weapon from "./Weapon/Weapon";
+import Weapons from "./Weapon/Weapons";
 import PageWrapper from "./Pagewrapper";
 import NewCharacter from "./Character/NewCharacter";
 import UpdateCharacterForm from "./Character/UpdateCharacter";
+import UpdateWeapon from "./Weapon/UpdateWeapon";
+
 function App() {
   return (
     <Routes>
@@ -30,7 +32,8 @@ function App() {
         {/* <Route path="/Bonus" element={<Bonus />} /> */}
         <Route path="/games" element={<Game />} />
         <Route path="/Character" element={<Character />} />
-        <Route path="/Weapon" element={<Weapon />} />
+        <Route path="/Weapons" element={<Weapons />} />
+        <Route path="/weapons/:id/update" element={<UpdateWeapon />} />
         {/* <Route path="/Bonus" element={<Bonus />} />  */}
       </Route>
     </Routes>
