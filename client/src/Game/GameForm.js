@@ -14,6 +14,9 @@ export default function GameForm(props){
         } catch(error){
             alert(error)
         }
+        setName('')
+        setYear('')
+        setGenre('')
     };
 
     return (
