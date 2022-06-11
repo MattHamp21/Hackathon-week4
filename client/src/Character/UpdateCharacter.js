@@ -5,10 +5,11 @@ import { useParams } from "react-router-dom";
 // we use axios in order to make request to
 
 const UpdateCharacterForm = (props) => {
+
   const [name, setName] = useState(props.name);
   const [age, setAge] = useState(props.age);
   const [game, setGame] = useState(props.game);
-  const params = useParams;
+  const params = useParams();
   const handleSubmit = async (c) => {
     c.preventDefault();
     try {
