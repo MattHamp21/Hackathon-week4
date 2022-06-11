@@ -10,8 +10,8 @@ const PageWrapper = () => {
         <Link className="links" to="/games">
           Games
         </Link>
-        <Link className="links" to="/character">
-          Character
+        <Link className="links" to="/characters">
+          Characters
         </Link>
         <Link className="links" to="/wepons">
           Weapon
