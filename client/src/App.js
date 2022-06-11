@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import PageWrapper from "./PageWrapper";
 import Home from "./Home";
 import Characters from "./Character/Character";
 import CharacterForm from "./Character/CharacterForm";
@@ -9,6 +8,7 @@ import CharacterShow from "./Character/CharacterShow";
 import Game from "./Game/Game";
 import Character from "./Character/Character";
 import Weapon from "./Weapon/Weapon";
+import PageWrapper from "./Pagewrapper";
 
 function App() {
   return (

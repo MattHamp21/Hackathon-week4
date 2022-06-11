@@ -6,7 +6,7 @@ export default function CharacterForm() {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    navigate("/Character");
+    navigate("/Characters");
 
     return (
       <div>

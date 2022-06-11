@@ -1,25 +1,41 @@
-export default function NewCharacter() {
-  const [Characters, setCharacters] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+import { useState } from "react";
+import axios from "axios";
 
-  useEffect(() => {
-    getCharacters();
-  }, []);
+const NewCharacter = (props) => {
+  const [name, setName] = useState(null);
+  const [age, setAge] = useState(0);
+  const [game, setGame] = useState(props.game);
 
-  const addCharcter = (Character) => {
-    setCharacters([Character, ...Characters]);
-  };
-
-  const getCharacters = async () => {
+  const handleSubmit = async (c) => {
+    c.preventDefault();
+    console.log({ name, age, game });
     try {
-      let res = await axios.get("/api/characters");
-      setCharacters(res.data);
-      setLoading(false);
+      let res = await axios.post("/api/characters", { name, age, game });
+      console.log(res.data);
+      props.addUser(res.data);
     } catch (err) {
-      console.log("error");
-      setError(err);
-      setLoading(false);
+      console.log(err);
     }
   };
-}
+
+  return (
+    <div>
+      <h1>Form</h1>
+      <form onSubmit={handleSubmit}>
+        <p>name</p>
+        <input value={name} onChange={(c) => setName(c.target.value)} />
+        <p>age</p>
+        <input
+          type="number"
+          value={age}
+          onChange={(c) => setAge(c.target.value)}
+        />
+        <p>Game</p>
+        <input value={game} onChange={(c) => setGame(c.target.value)} />
+        <button>Submit</button>
+      </form>
+    </div>
+  );
+};
+
+export default NewCharacter;
