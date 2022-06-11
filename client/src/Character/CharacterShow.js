@@ -6,7 +6,7 @@ import Characters from "./Character";
 export default function CharacterShow() {
   const params = useParams();
   const navigate = useNavigate;
-  const [characters, setCharacters] = useState({});
+  const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
